@@ -36,7 +36,7 @@ include 'conectaBanco.php';
                 echo '<thead><tr><th>ID</th><th>Produto</th><th>Desconto</th><th>Data Início</th><th>Data Fim</th></tr></thead>';
                 echo '<tbody>';
                 while($row = $result->fetch_assoc()) {
-                    echo '<tr><td>' . $row["id"]. '</td><td>' . $row["nome"]. '</td><td>' . $row["desconto"]. '%</td><td>' . $row["data_inicio"]. '</td><td>' . $row["data_fim"]. '</td></tr>';
+                    echo '<tr><td>' . $row["id"]. '</td><td>' . $row["nome"]. '</td><td>' . $row["desconto"]. '%</td><td>' . $row["dataInicio"]. '</td><td>' . $row["dataFim"]. '</td></tr>';
                 }
                 echo '</tbody></table>';
             } else {
