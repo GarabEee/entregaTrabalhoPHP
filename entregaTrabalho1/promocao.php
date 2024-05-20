@@ -8,42 +8,32 @@ include 'conectaBanco.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Promoções - Loja de Tênis</title>
+    <title>Promoções</title>
 </head>
 <body>
-    <div class="container">
-        <h1 class="mt-5">Promoções</h1>
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link" href="navega.php">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="produtos.php">Produtos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="promocao.php">Promoções</a>
-            </li>
-        </ul>
-        <div class="mt-4">
-            <h2>Lista de Promoções</h2>
-            <img src="imagens/promocao.jpg" class="img-fluid mb-4" alt="Imagem Promoções">
-            <?php
-            $sql = "SELECT promocoes.id, produtos.nome, promocoes.desconto, promocoes.data_inicio, promocoes.data_fim FROM promocoes JOIN produtos ON promocoes.produto_id = produtos.id";
-            $result = $conn->query($sql);
-
-            if ($result->num_rows > 0) {
-                echo '<table class="table">';
-                echo '<thead><tr><th>ID</th><th>Produto</th><th>Desconto</th><th>Data Início</th><th>Data Fim</th></tr></thead>';
-                echo '<tbody>';
-                while($row = $result->fetch_assoc()) {
-                    echo '<tr><td>' . $row["id"]. '</td><td>' . $row["nome"]. '</td><td>' . $row["desconto"]. '%</td><td>' . $row["dataInicio"]. '</td><td>' . $row["dataFim"]. '</td></tr>';
-                }
-                echo '</tbody></table>';
-            } else {
-                echo "Nenhuma promoção encontrada.";
-            }
-            ?>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Max Sneakers</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="navega.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produtos.php">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="promocoes.php">Promoções</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
+    </nav>
+    <div class="container mt-4">
+        <h2>Lista de Promoções</h2>
+        <img src="imagens/promocao.jpg" class="img-fluid mb-4" alt="Imagem Promoções">
 </body>
 </html>
