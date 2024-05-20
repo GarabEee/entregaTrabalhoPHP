@@ -12,9 +12,9 @@ CREATE TABLE produtos (
 
 CREATE TABLE promocao (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    produto_id INT NOT NULL,
+    produtoId INT NOT NULL,
     desconto DECIMAL(5, 2) NOT NULL,
-    data_inicio DATE NOT NULL,
-    data_fim DATE NOT NULL,
+    dataInicio DATE NOT NULL,
+    dataFim DATE NOT NULL,
     FOREIGN KEY (produto_id) REFERENCES produtos(id)
 );
