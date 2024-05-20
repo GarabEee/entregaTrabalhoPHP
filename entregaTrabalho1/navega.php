@@ -7,23 +7,30 @@
     <title>Loja de Tênis</title>
 </head>
 <body>
-    <div class="container">
-        <h1 class="mt-5">Bem-vindo à Max Sneakers</h1>
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link active" href="navega.php">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="produtos.php">Produtos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="promocao.php">promoções</a>
-            </li>
-        </ul>
-        <div class="mt-4">
-            <h2>Novidades da semana</h2>
-            <p>Navegue pelas abas para ver nossos produtos ou conferir as promoções.</p>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Max Sneakers</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produtos.php">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="promocao.php">Promoções</a>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </nav>
+    <div class="container mt-4">
+        <h2>Novidades da semana</h2>
+        <p>Navegue pelas abas para ver nossos produtos ou conferir as promoções.</p>
+        <img src="a definir" class="img-fluid" alt="Imagem inicio">
     </div>
 </body>
 </html>
