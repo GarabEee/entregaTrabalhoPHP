@@ -10,7 +10,7 @@ CREATE TABLE produtos (
     estoque INT NOT NULL
 );
 
-CREATE TABLE promocoes (
+CREATE TABLE promocao (
     id INT AUTO_INCREMENT PRIMARY KEY,
     produto_id INT NOT NULL,
     desconto DECIMAL(5, 2) NOT NULL,
